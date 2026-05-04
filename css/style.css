@@ -74,10 +74,9 @@ button {
   font-weight: 600;
   height: auto;
   margin: 0.5em auto;
-  max-width: 100%;
-  min-width: 30%;
   padding: 2em;
   text-align: center;
+  width: 90%;
 }
 
 .visually-hidden {
