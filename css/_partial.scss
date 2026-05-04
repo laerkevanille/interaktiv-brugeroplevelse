@@ -2,7 +2,7 @@
 
 $bgDefault: #b6c2b5;
 $primaryColor: #263124;
-$textColor: #5b3a2f;
+$textColor: #38241d;
 
 
 /*Mixins*/
@@ -12,7 +12,7 @@ $textColor: #5b3a2f;
     transition: 1.5s ease-in-out;
 }
 
-@mixin btns {
+@mixin cta {
     
         background : {
             color: transparent;
@@ -32,11 +32,13 @@ $textColor: #5b3a2f;
     cursor: pointer;
     display: block;
     font-family: p22-folk-art-block, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     height: auto;
+    margin: 0.5em auto;
     max-width: 100%;
     min-width: 30%;
-    padding: 1em;
+    padding: 2em;
     text-align: center;
 }
+
