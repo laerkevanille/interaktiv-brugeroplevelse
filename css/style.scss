@@ -1,0 +1,38 @@
+@use 'partial';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    @include partial.bg;
+}
+
+
+/* Header */
+
+header{
+    background-color: partial.$primaryColor;
+    height: 80px;
+    width: 100%;
+
+        img{
+            height: auto;
+            max-width: 100%;
+        }
+}
+
+h1{
+    color: partial.$primaryColor;
+    font-family: p22-folk-art-stitch, sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 2em auto;
+    text-align: center;
+}
+
+button{
+    @include partial.btns;
+}

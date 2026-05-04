@@ -1,0 +1,58 @@
+/*Variabler*/
+/*Mixins*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #b6c2b5;
+  transition: 1.5s ease-in-out;
+}
+
+/* Header */
+header {
+  background-color: #263124;
+  height: 80px;
+  width: 100%;
+}
+header img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  color: #263124;
+  font-family: p22-folk-art-stitch, sans-serif;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 2em auto;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  background-image: url(../img/btn.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+button:hover {
+  background-image: url(../img/btn-hover.png);
+  text-decoration: underline;
+}
+button {
+  border: none;
+  color: #5b3a2f;
+  cursor: pointer;
+  display: block;
+  font-family: p22-folk-art-block, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  height: auto;
+  max-width: 100%;
+  min-width: 30%;
+  padding: 1em;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+/*Variabler*/
+
+$bgDefault: #b6c2b5;
+$primaryColor: #263124;
+$textColor: #5b3a2f;
+
+
+/*Mixins*/
+
+@mixin bg ($bg: #b6c2b5) {
+    background-color: $bg;
+    transition: 1.5s ease-in-out;
+}
+
+@mixin btns {
+    
+        background : {
+            color: transparent;
+            image: url(../img/btn.png);
+            position: center;
+            size: contain;
+            repeat: no-repeat;
+        }
+        
+        &:hover{
+            background-image: url(../img/btn-hover.png);
+            text-decoration: underline;
+        }
+
+    border: none;
+    color: $textColor;
+    cursor: pointer;
+    display: block;
+    font-family: p22-folk-art-block, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    height: auto;
+    max-width: 100%;
+    min-width: 30%;
+    padding: 1em;
+    text-align: center;
+}
