@@ -7,7 +7,6 @@
 
 body {
   background-color: #b6c2b5;
-  transition: 1.5s ease-in-out;
 }
 
 /* Header */
@@ -25,22 +24,45 @@ header img {
 }
 
 /* Hovedindhold */
-h1 {
-  color: #263124;
-  font-family: p22-folk-art-stitch, sans-serif;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 500;
-  margin: 2em auto;
-  text-align: center;
+/*h1{
+    color: partial.$primaryColor;
+    font-family: p22-folk-art-stitch, sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    margin: 2em auto;
+    text-align: center;
+}*/
+.loading {
+  background-image: url(../img/loading-screen.gif);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 600px;
+  margin: -80px auto;
+}
+
+.start {
+  background-image: url(../img/cta-start.svg);
+  color: transparent;
+  margin: 0 auto;
+  max-width: 35%;
+  position: relative;
+  top: 65%;
+  animation: pulse 2s ease-in-out infinite;
+}
+.start:hover {
+  background-image: url(../img/cta-start-hover.svg);
+  animation: none;
 }
 
 .startingTxt {
-  font-family: p22-folk-art-block, snas-serif;
+  font-family: p22-folk-art-block, sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: #38241d;
-  margin: 1.3em auto;
+  margin: 10px auto;
   width: 80%;
 }
 
@@ -55,14 +77,15 @@ h1 {
 
 button {
   background-color: transparent;
-  background-image: url(../img/btn.png);
+  background-image: url(../img/cta.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 button:hover {
-  background-image: url(../img/btn-hover.png);
+  background-image: url(../img/cta-hover.svg);
   text-decoration: underline;
+  transition: 0.3s ease-in-out;
 }
 button {
   border: none;
@@ -79,6 +102,17 @@ button {
   width: 90%;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(115%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;

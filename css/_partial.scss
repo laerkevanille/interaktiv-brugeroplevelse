@@ -7,24 +7,24 @@ $textColor: #38241d;
 
 /*Mixins*/
 
-@mixin bg ($bg: #b6c2b5) {
+@mixin bg ($bg: $bgDefault) {
     background-color: $bg;
-    transition: 1.5s ease-in-out;
 }
 
 @mixin cta {
     
         background : {
             color: transparent;
-            image: url(../img/btn.png);
+            image: url(../img/cta.svg);
             position: center;
             size: contain;
             repeat: no-repeat;
         }
         
         &:hover{
-            background-image: url(../img/btn-hover.png);
+            background-image: url(../img/cta-hover.svg);
             text-decoration: underline;
+            transition: 0.3s ease-in-out;
         }
 
     border: none;

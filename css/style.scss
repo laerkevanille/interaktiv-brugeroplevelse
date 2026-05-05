@@ -29,7 +29,7 @@ header{
 
 /* Hovedindhold */
 
-h1{
+/*h1{
     color: partial.$primaryColor;
     font-family: p22-folk-art-stitch, sans-serif;
     font-size: 3rem;
@@ -37,17 +37,46 @@ h1{
     font-weight: 500;
     margin: 2em auto;
     text-align: center;
+}*/
+
+.loading{
+    background : {
+        image: url(../img/loading-screen.gif);
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+    }
+
+    max-width: 100%;
+    height: 600px;
+    margin: -80px auto;
+}
+
+.start{
+    background-image: url(../img/cta-start.svg);
+    color: transparent;
+    margin: 0 auto;
+    max-width: 35%;
+    position: relative;
+    top: 65%;
+    animation: pulse 2s ease-in-out infinite;
+    
+
+        &:hover{
+            background-image: url(../img/cta-start-hover.svg);
+            animation: none;
+        }
 }
 
 .startingTxt{
     font : {
-        family: p22-folk-art-block, snas-serif;
+        family: p22-folk-art-block, sans-serif;
         size: 20px;
         weight: 500;
     }
 
     color: partial.$textColor;
-    margin: 1.3em auto;
+    margin: 10px auto;
     width: 80%;
 }
 
@@ -66,6 +95,14 @@ button{
 }
 
 
+
+
+
+@keyframes pulse{
+    0% {transform: scale(100%);}
+    50% {transform: scale(115%);}
+    100% {transform: scale(100%);}
+}
 
 .visually-hidden{
     position: absolute !important;
