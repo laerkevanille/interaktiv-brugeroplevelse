@@ -75,6 +75,13 @@ header img {
   display: block;
 }
 
+.myVideo {
+  display: block;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 button {
   background-color: transparent;
   background-image: url(../img/cta.svg);

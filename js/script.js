@@ -16,13 +16,18 @@ const updateUI = (pText, btnsText, imgPath, vidPath) => {
      if(vidPath != undefined) {
         const video = document.createElement("video");
         video.src = vidPath;
-        section.append("video");
+        video.autoplay = true;
+        video.muted = true; // kræves ofte for autoplay
+        video.playsInline = true;
+        video.classList.add("myVideo");
+        section.append(video);
     }
 
-    const p = document.createElement("p");
-    p.classList.add("visually-hidden");   //spillets tekst er en del af animationen og tilføjes her for skærmlæsertilgængelighed
-    p.textContent = pText;
-    section.append(p);
+    if(pText != undefined) {
+        const p = document.createElement("p");
+        p.textContent = pText;
+        section.append(p);
+    }
 
     btnsText.forEach(text => {
         const button = document.createElement("button");
@@ -40,33 +45,45 @@ const nextStage = (e) => {
     console.log(e.target.textContent);
     switch(e.target.textContent) {
         case "Afsted!":  //anim scene
-            pText = "Lorem Ipsum";
+            vidPath = "vid/intro.mp4"
             btnsText = ["Akt 1"];
         break;
 
         //Akt 1 - password
         case "Akt 1":
+            imgPath = "img/password.png"
             pText = "Opret et password?";
             btnsText = ["Stærkt password", "Svagt password", "Intet password"];
         break;
         case "Stærkt password":
+            imgPath = "img/succes.png"
             pText = "Password oprettet.";
             btnsText = ["anim 2"];
         break;
-        case "Svagt password":  //location=true
+        case "Svagt password":
+            imgPath = "img/succes2.png"
             pText = "Password oprettet. Ukendt enhed tilknyttet.";
             btnsText = ["anim 2.1"];
         break;
         case "Intet password":
+            imgPath = "img/adgang-mistet.png"
             pText = "Adgang mistet.";
             btnsText = ["Prøv igen"];
         break;
-        case "anim 2":  //anim scene
-            pText = "Lorem Ipsum";
-            btnsText = ["Akt 2"];
+        case "anim 2":
+            vidPath = "vid/tracking.mp4"
+            btnsText = ["anim 2.2"];
         break;
         case "anim 2.1":
-            pText = "Lorem Ipsum";
+            vidPath = "vid/tracking.mp4"
+            btnsText = ["anim 2.1.1"];
+        break;
+        case "anim 2.2":
+            imgPath = "img/tilknytning-fejl.png"
+            btnsText = ["Akt 2"];
+        break;
+        case "anim 2.1.1":
+            imgPath = "img/located.gif"
             btnsText = ["Akt 2"];
         break;
         case "Prøv igen":
@@ -76,46 +93,63 @@ const nextStage = (e) => {
 
         //Akt 2 - opdatering
         case "Akt 2":
+            imgPath = "img/opdatering.png"
             pText = "Vil du installere systemopdateringen?";
             btnsText = ["Opdatér nu", "Udskyd opdatering", "Afvis"];
         break;
         case "Opdatér nu":  //kort loading anim
+            vidPath = "vid/update.mp4"
             pText = "Din telefon er nu opdateret.";
             btnsText = ["anim 3"];
         break;
-        case "Udskyd opdatering":  //delay=true
+        case "Udskyd opdatering":
+            imgPath ="img/delayed.png"
             pText = "Opdatering udskudt.";
-            btnsText = ["anim 3"];
+            btnsText = ["anim 3.1"];
         break;
-        case "Afvis":  //outdated=true
+        case "Afvis":
+            imgPath ="img/afvist.png"
             pText = "Opdatering afvist";
-            btnsText = ["anim 3"];
+            btnsText = ["anim 3.2"];
         break;
         case "anim 3":  // anim scene
-            pText = "Lorem Ipsum";
+            vidPath = "vid/phishing.mp4"
             btnsText = ["Akt 3"];
+        break;
+        case "anim 3.1":  // anim scene
+            vidPath = "vid/phishing.mp4"
+            btnsText = ["Akt 3.1"];
+        break;
+        case "anim 3.2":  // anim scene
+            vidPath = "vid/phishing.mp4"
+            btnsText = ["Akt 3.2"];
         break;
 
         //Akt 3
         case "Akt 3":
-            pText = "Hvad skal Pachi gøre?";
+            imgPath = "img/mail.png"
+            pText = "Der er en ny e-mail i indbakken. Den ser ud til at være fra Fresa Fone, der afholder en stor konkurrence. Dog har Pachi ikke tilmeldt sig nogen mails. Hvad skal Pachi gøre?";
             btnsText = ["Anmeld og blokér", "Ignorér", "Klik på link"];
         break; 
         case "Anmeld og blokér":
+            imgPath = "img/blocked.png"
             pText = "Afsender blokeret.";
             btnsText = ["anim 4"];
         break;
         case "Ignorér":
+            imgPath = "img/ignored.png"
             pText = "Pachi vælger at ignorere beskeden.";
             btnsText = ["anim 4"];
         break;
 
-        case "Klik på link": //kort anim
-            pText = "Lorem Ipsum";
+        case "Klik på link":
+            imgPath = "img/deltag.png"
+            pText = "For at deltage i den store konkurrence, skal man angive sine personlige oplysninger. Hvad skal Pachi gøre?";
             btnsText = ["Luk siden", "Angiv oplysninger"];
         break;
-        case "Luk siden":  //compromised=true
-            pText = "Pachi vælger at lukke siden uden at angive sine personlige oplysninger";
+        case "Luk siden":
+            imgPath ="img/luk.png"
+            pText = "Pachi vælger at lukke siden uden at angive sine personlige oplysninger.";
             btnsText = ["anim 4"];
         break;
         case "Angiv oplysninger":  //kort anim?
