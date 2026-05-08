@@ -9,7 +9,6 @@ body {
   background-color: #b6c2b5;
 }
 
-/* Header */
 header {
   background-color: #263124;
   display: flex;
@@ -23,31 +22,25 @@ header img {
   max-width: 75%;
 }
 
-/* Hovedindhold */
-/*h1{
-    color: partial.$primaryColor;
-    font-family: p22-folk-art-stitch, sans-serif;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 500;
-    margin: 2em auto;
-    text-align: center;
-}*/
+main {
+  min-height: 100%;
+}
+
 .loading {
   background-image: url(../img/loading-screen.gif);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 600px;
-  margin: -80px auto;
+  aspect-ratio: 1/1;
+  margin: 15px auto;
 }
 
 .start {
   background-image: url(../img/cta-start.svg);
   color: transparent;
   margin: 0 auto;
-  max-width: 35%;
+  max-width: 20%;
   position: relative;
   top: 65%;
   animation: pulse 2s ease-in-out infinite;
@@ -57,13 +50,31 @@ header img {
   animation: none;
 }
 
-.startingTxt {
+p {
   font-family: p22-folk-art-block, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3d231a;
+  margin: 15px auto;
+  width: 80%;
+  text-align: center;
+}
+
+a {
+  font-family: p22-folk-art-stitch, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #38241d;
-  margin: 10px auto;
+  color: #3d231a;
+  display: block;
+  margin: 30px auto;
   width: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:hover {
+  color: #263124;
+  text-decoration: underline;
 }
 
 .stage {
@@ -77,7 +88,7 @@ header img {
 
 .myVideo {
   display: block;
-  height: 600px;
+  aspect-ratio: 1/1;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -103,7 +114,7 @@ button:hover {
 }
 button {
   border: none;
-  color: #38241d;
+  color: #3d231a;
   cursor: pointer;
   display: block;
   font-family: p22-folk-art-block, sans-serif;
@@ -111,9 +122,15 @@ button {
   font-weight: 600;
   height: auto;
   margin: 0.5em auto;
-  padding: 2em;
+  padding: 3em;
   text-align: center;
-  width: 90%;
+  width: 100%;
+}
+
+footer {
+  background-color: #263124;
+  width: 100%;
+  height: 50px;
 }
 
 @keyframes pulse {
@@ -137,4 +154,33 @@ button {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    height: 120px;
+    padding: none;
+  }
+  header img {
+    max-width: 100%;
+    height: 50vh;
+  }
+  .active {
+    max-width: 80%;
+    padding: 2em 20%;
+  }
+  .start {
+    max-width: 30%;
+    top: 75%;
+  }
+  img, .myVideo, .loading {
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 32px;
+    max-width: 100%;
+  }
+  a {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -103,31 +103,31 @@ const nextStage = (e) => {
         case "Stærkt password":
             imgPath = "img/succes.png";
             pText = "Password oprettet.";
-            btnsText = ["anim 2"];
+            btnsText = ["Fedt!"];
         break;
         case "Svagt password":
             imgPath = "img/succes2.png";
             pText = "Password oprettet. Ukendt enhed tilknyttet.";
-            btnsText = ["anim 2.1"];
+            btnsText = ["Fedt! "];
         break;
         case "Intet password":
             imgPath = "img/adgang-mistet.png";
             pText = "Adgang mistet.";
             btnsText = ["Prøv igen"];
         break;
-        case "anim 2":
+        case "Fedt!":
             vidPath = "vid/tracking.mp4";
-            btnsText = ["anim 2.2"];
+            btnsText = [">"];
         break;
-        case "anim 2.1":
+        case "Fedt! ":
             vidPath = "vid/tracking.mp4";
-            btnsText = ["anim 2.1.1"];
+            btnsText = ["> "];
         break;
-        case "anim 2.2":
+        case ">":
             imgPath = "img/tilknytning-fejl.png";
             btnsText = ["Akt 2"];
         break;
-        case "anim 2.1.1":
+        case "> ":
             imgPath = "img/located.gif";
             btnsText = ["Akt 2"];
         break;
@@ -145,29 +145,29 @@ const nextStage = (e) => {
         case "Opdatér nu":  //kort loading anim
             vidPath = "vid/update.mp4";
             pText = "Din telefon er nu opdateret.";
-            btnsText = ["anim 3"];
+            btnsText = ["Skønt!"];
         break;
         case "Udskyd opdatering":
             imgPath ="img/delayed.png";
             pText = "Opdatering udskudt.";
-            btnsText = ["anim 3.1"];
+            btnsText = ["OK"];
         break;
         case "Afvis":
             imgPath ="img/afvist.png"
             pText = "Opdatering afvist";
-            btnsText = ["anim 3.2"];
+            btnsText = ["OK "];
         break;
-        case "anim 3":  // anim scene
+        case "Skønt!":  // anim scene
             vidPath = "vid/phishing.mp4";
             btnsText = ["Akt 3"];
         break;
-        case "anim 3.1":  // anim scene
+        case "OK":  // anim scene
             vidPath = "vid/phishing.mp4";
-            btnsText = ["Akt 3.1"];
+            btnsText = ["Akt 3 "];
         break;
-        case "anim 3.2":  // anim scene
+        case "OK ":  // anim scene
             vidPath = "vid/phishing.mp4";
-            btnsText = ["Akt 3.2"];
+            btnsText = [" Akt 3"];
         break;
 
         //Akt 3
@@ -179,12 +179,12 @@ const nextStage = (e) => {
         case "Anmeld og blokér":
             imgPath = "img/blocked.png";
             pText = "Afsender blokeret.";
-            btnsText = ["anim 4"];
+            btnsText = ["Okay"];
         break;
         case "Ignorér":
             imgPath = "img/ignored.png";
             pText = "Pachi vælger at ignorere beskeden.";
-            btnsText = ["anim 4"];
+            btnsText = ["Okay"];
         break;
 
         case "Klik på link":
@@ -195,7 +195,7 @@ const nextStage = (e) => {
         case "Luk siden":
             imgPath ="img/luk.png";
             pText = "Pachi vælger at lukke siden uden at angive sine personlige oplysninger.";
-            btnsText = ["anim 4"];
+            btnsText = ["Okay"];
         break;
         case "Angiv oplysninger":
             imgPath = "img/indsendt.png";
@@ -208,14 +208,14 @@ const nextStage = (e) => {
             btnsText = ["Prøv igen"];
         break;
 
-        case "anim 4":
+        case "Okay":
             imgPath = "img/queen.png";
             pText = "Den besynderlige mail får Pachi til at tænke, at der er noget fuskeri på spil. Han beslutter sig for at advare Dronning Gatita om de mystiske hændelser.";
             btnsText = ["Akt 4"];
         break;
 
         //Akt 3.1
-        case "Akt 3.1":
+        case "Akt 3 ":
             imgPath = "img/mail.png";
             pText = "Der er en ny e-mail i indbakken. Den ser ud til at være fra Fresa Fone, der afholder en stor konkurrence. Dog har Pachi ikke tilmeldt sig nogen mails. Hvad skal Pachi gøre?";
             btnsText = ["Anmeld og blokér ", "Ignorér ", "Klik på link "];
@@ -223,12 +223,12 @@ const nextStage = (e) => {
         case "Anmeld og blokér ":
             imgPath = "img/blocked.png";
             pText = "Afsender blokeret.";
-            btnsText = ["anim 4.1"];
+            btnsText = ["Okay "];
         break;
         case "Ignorér ":
             imgPath = "img/ignored.png";
             pText = "Pachi vælger at ignorere beskeden.";
-            btnsText = ["anim 4.1"];
+            btnsText = ["Okay "];
         break;
 
         case "Klik på link ":
@@ -239,7 +239,7 @@ const nextStage = (e) => {
         case "Luk siden ":
             imgPath ="img/luk.png";
             pText = "Pachi vælger at lukke siden uden at angive sine personlige oplysninger.";
-            btnsText = ["anim 4.1"];
+            btnsText = ["Okay"];
         break;
         case "Angiv oplysninger":
             imgPath = "img/indsendt.png";
@@ -252,14 +252,14 @@ const nextStage = (e) => {
             btnsText = ["Prøv igen"];
         break;
 
-        case "anim 4.1":
+        case "Okay ":
             imgPath = "img/queen.png";
             pText = "Den besynderlige mail får Pachi til at tænke, at der er noget fuskeri på spil. Han beslutter sig for at advare Dronning Gatita om de mystiske hændelser.";
-            btnsText = ["Akt 4.1"];
+            btnsText = ["Akt 4 "];
         break;
 
         //Akt 3.2
-        case "Akt 3.2":
+        case " Akt 3":
             imgPath = "img/mail.png";
             pText = "Der er en ny e-mail i indbakken. Den ser ud til at være fra Fresa Fone, der afholder en stor konkurrence. Dog har Pachi ikke tilmeldt sig nogen mails. Hvad skal Pachi gøre?";
             btnsText = [" Anmeld og blokér", " Ignorér", " Klik på link"];
@@ -267,12 +267,12 @@ const nextStage = (e) => {
         case " Anmeld og blokér":
             imgPath = "img/blocked.png";
             pText = "Afsender blokeret.";
-            btnsText = ["anim 4.2"];
+            btnsText = [" Okay"];
         break;
         case " Ignorér":
             imgPath = "img/ignored.png";
             pText = "Pachi vælger at ignorere beskeden.";
-            btnsText = ["anim 4.2"];
+            btnsText = [" Okay"];
         break;
 
         case " Klik på link":
@@ -283,7 +283,7 @@ const nextStage = (e) => {
         case " Luk siden":
             imgPath ="img/luk.png";
             pText = "Pachi vælger at lukke siden uden at angive sine personlige oplysninger.";
-            btnsText = ["anim 4.2"];
+            btnsText = [" Okay"];
         break;
         case "Angiv oplysninger":
             imgPath = "img/indsendt.png";
@@ -296,10 +296,10 @@ const nextStage = (e) => {
             btnsText = ["Prøv igen"];
         break;
 
-        case "anim 4.2":
+        case " Okay":
             imgPath = "img/queen.png";
             pText = "Den besynderlige mail får Pachi til at tænke, at der er noget fuskeri på spil. Han beslutter sig for at advare Dronning Gatita om de mystiske hændelser.";
-            btnsText = ["Akt 4.2"];
+            btnsText = [" Akt 4"];
         break;
 
         //Akt 4
@@ -311,29 +311,27 @@ const nextStage = (e) => {
         case "Installér VPN":
             vidPath = "vid/vpn.mp4";
             pText = "BoskeVPN er nu installeret.";
-            btnsText = ["anim 5"];
+            btnsText = ["Fint"];
         break;
         case "Gør intet":
             imgPath = "img/app-luk.png";
             pText = "App quiosco lukket.";
-            btnsText = ["anim 5"];
+            btnsText = ["Fint"];
         break;
 
-        case "anim 5":
+        case "Fint":
             imgPath = "img/no-admin.png";
             pText = "Åh nej - den onde hjort Cifro har forsøgt at hacke dig for at se din lokation! Heldigvis kunne han ikke få adgang.";
-            btnsText = ["anim 6"];
+            btnsText = ["Pyha"];
         break;
 
-        case "anim 6":
-            imgPath = "img/fork.png";
-            pText = "Pachi fortsætter mod slottet for at advare Dronning Gatita, men pludselig deler vejen sig i to. Mon han kan bruge GPS for at finde vej?";
+        case "Pyha":
             btnsText = ["Akt 5"];
         break;
 
 
         //Akt 4.1
-        case "Akt 4.1":
+        case "Akt 4 ":
             imgPath = "img/VPN.png";
             pText = "Måske er det en god idé at installere en VPN?";
             btnsText = ["Installér VPN ", "Gør intet"];
@@ -351,19 +349,17 @@ const nextStage = (e) => {
         case "Afvis ":
             imgPath = "img/afvist.png";
             pText = "Opdatering afvist. BoskeVPN kunne ikke installeres.";
-            btnsText = ["anim 5.1"];
+            btnsText = ["Nå øv"];
         break;
 
-        case "anim 5.1":
+        case "Nå øv":
             imgPath = "img/yes-admin.png";
             pText = "Åh nej - den onde hjort Cifro har forsøgt at hacke dig for at se din lokation! Sikkerheden på din mobil har været svækket, og han har desværre fået delvis adgang.";
-            btnsText = ["anim 6.1"];
+            btnsText = ["Sørens også!"];
         break;
 
-        case "anim 6.1":
-            imgPath = "img/fork.png";
-            pText = "Pachi fortsætter mod slottet for at advare Dronning Gatita, men pludselig deler vejen sig i to. Mon han kan bruge GPS for at finde vej?";
-            btnsText = ["Akt 5.1"];
+        case "Sørens også!":
+            btnsText = ["Akt 5 "];
         break;
 
 
@@ -401,7 +397,7 @@ const nextStage = (e) => {
 
 
         // Akt 5.1
-        case "Akt 5.1":
+        case "Akt 5 ":
             imgPath = "img/fork.png";
             pText = "Pachi fortsætter mod slottet for at advare Dronning Gatita, men pludselig deler vejen sig i to. Mon han kan bruge GPS for at finde vej?";
             btnsText = ["Brug GPS ", "Drej til højre", "Drej til venstre"];
@@ -469,6 +465,9 @@ const nextStage = (e) => {
             vidPath = "vid/queen.mp4";
             pText = "Pachi ankommer endelig til Dronning Gatitas farverige slot! Med hendes hjælp kan teknologien endelig vende tilbage til den verden, der havde glemt alt om det.";
             btnsText = ["Hurra! "];
+        break;
+        case "Hurra! ":
+            btnsText = ["Prøv igen"];
         break;
 
 
