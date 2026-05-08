@@ -40,7 +40,52 @@ const updateUI = (pText, btnsText, imgPath, vidPath) => {
     main.replaceChildren(section);
 }
 
+let cursor = 0;
+let currentStage = "";
+
+const KONAMI_CODE = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+    "b",
+    "a"
+];
+
+document.addEventListener("keydown", (e) => {
+
+    if (currentStage !== "Tast Konami") return;
+
+    if (e.key.toLowerCase() === KONAMI_CODE[cursor].toLowerCase()) {
+        cursor++;
+    } else {
+        cursor = 0;
+    }
+
+    if (cursor === KONAMI_CODE.length) {
+        activate();
+        cursor = 0;
+    }
+});
+
+const activate = () => {
+
+    let pText, btnsText, imgPath, vidPath;
+
+    imgPath = "img/hack.png";
+    pText = "DU HAR HACKET CIFRO! Truslen er i denne omgang neutraliseret! Tillykke!!";
+    btnsText = ["Afslutning"];
+
+    updateUI(pText, btnsText, imgPath, vidPath);
+}
+
+
 const nextStage = (e) => {
+    currentStage = e.target.textContent;
     let pText, btnsText, imgPath, vidPath;
     console.log(e.target.textContent);
     switch(e.target.textContent) {
@@ -288,7 +333,7 @@ const nextStage = (e) => {
 
 
         //Akt 4.1
-        case "Akt 4":
+        case "Akt 4.1":
             imgPath = "img/VPN.png";
             pText = "Måske er det en god idé at installere en VPN?";
             btnsText = ["Installér VPN ", "Gør intet"];
@@ -379,7 +424,17 @@ const nextStage = (e) => {
             pText = "Pludselig får Pachi en idé! Han ved ikke hvor den kommer fra, eller helt hvad det betyder, men noget siger ham, at han skal taste Konami-koden. Kan du hjælpe Pachi?";
             btnsText = ["Tast Konami", "Gå forbi"];
         break;
-        case "Gå forbi", "Giv op ", "Har ikke tastatur":
+        case "Gå forbi":
+            imgPath = "img/background3.png";
+            pText = "Pachi går videre uden at trykke på knapperne, og nærmer sig hastigt slottet - men gad vide hvad der var sket, hvis han alligevel havde trykket?";
+            btnsText = ["Akt 7"];
+        break;
+        case "Giv op ":
+            imgPath = "img/background3.png";
+            pText = "Pachi går videre uden at trykke på knapperne, og nærmer sig hastigt slottet - men gad vide hvad der var sket, hvis han alligevel havde trykket?";
+            btnsText = ["Akt 7"];
+        break;
+        case "Har ikke tastatur":
             imgPath = "img/background3.png";
             pText = "Pachi går videre uden at trykke på knapperne, og nærmer sig hastigt slottet - men gad vide hvad der var sket, hvis han alligevel havde trykket?";
             btnsText = ["Akt 7"];
@@ -401,6 +456,19 @@ const nextStage = (e) => {
             imgPath = "img/cifro.png";
             pText = "Men husk! Cifro er stadig derude med sine ondskabsfulde planer og sin lyst til magt, og faren lurer fortsat...";
             btnsText = ["Prøv igen"];
+        break;
+
+
+        //Secret
+        case "Secret":
+            imgPath = "img/hack.png";
+            pText = "DU HAR HACKET CIFRO! Truslen er i denne omgang neutraliseret! Tillykke!!";
+            btnsText = ["Afslutning"];
+        break;
+        case "Afslutning":
+            vidPath = "vid/queen.mp4";
+            pText = "Pachi ankommer endelig til Dronning Gatitas farverige slot! Med hendes hjælp kan teknologien endelig vende tilbage til den verden, der havde glemt alt om det.";
+            btnsText = ["Hurra! "];
         break;
 
 

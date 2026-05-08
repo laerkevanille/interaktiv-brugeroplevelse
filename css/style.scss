@@ -97,6 +97,13 @@ header{
     max-width: 100%;
 }
 
+img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+}
+
 button{
     @include partial.cta;
 }
