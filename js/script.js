@@ -363,6 +363,29 @@ const nextStage = (e) => {
         break;
 
 
+        //Akt 4.2
+        case " Akt 4":
+            imgPath = "img/VPN.png";
+            pText = "Måske er det en god idé at installere en VPN?";
+            btnsText = [" Installér VPN ", "Gør intet"];
+        break;
+        case "Installér VPN ":
+            imgPath = "img/outdated-fejl.png";
+            pText = "Dit styresystem er forældet og understøtter ikke denne app.";
+            btnsText = [" Nå øv"];
+        break;
+
+        case " Nå øv":
+            imgPath = "img/yes-admin.png";
+            pText = "Åh nej - den onde hjort Cifro har forsøgt at hacke dig for at se din lokation! Sikkerheden på din mobil har været svækket, og han har desværre fået delvis adgang.";
+            btnsText = ["Sørens også!"];
+        break;
+
+        case "Sørens også!":
+            btnsText = ["Akt 5 "];
+        break;
+
+
         // Akt 5
         case "Akt 5":
             imgPath = "img/fork.png";
